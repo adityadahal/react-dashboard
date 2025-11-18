@@ -5,7 +5,7 @@ import Loading from '../components/common/Loading';
 describe('Loading Component', () => {
   it('should render loading spinner', () => {
     render(<Loading />);
-    const spinner = screen.getByRole('generic');
+    const spinner = screen.getByRole('status', { name: /loading/i });
     expect(spinner).toBeTruthy();
   });
 });
