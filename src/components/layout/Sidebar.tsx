@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import {IconHome, IconDatabaseImport, IconLayoutDashboardFilled} from '@tabler/icons-react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -8,8 +9,8 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const navLinks = [
-    { to: '/', label: 'Home', icon: '🏠' },
-    { to: '/data', label: 'Data', icon: '📊' },
+    { to: '/', label: 'Home', icon: <IconHome/> },
+    { to: '/data', label: 'Data', icon: <IconDatabaseImport/> },
   ];
 
   return (
@@ -35,9 +36,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           {/* Logo */}
           <div className="flex items-center justify-between h-16 px-6 border-b border-gray-200">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">D</span>
-              </div>
+              <IconLayoutDashboardFilled/>
               <span className="text-xl font-bold text-gray-800">Dashboard</span>
             </div>
             <button
@@ -75,7 +74,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           {/* Footer */}
           <div className="p-4 border-t border-gray-200">
             <div className="text-xs text-gray-500 text-center">
-              © 2025 Dashboard App
+              © 2025 React Dashboard App
             </div>
           </div>
         </div>
