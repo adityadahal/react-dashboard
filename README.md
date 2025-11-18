@@ -1,7 +1,8 @@
 # Dashboard Application
-
-A modern, responsive dashboard web application built with React, Redux, TypeScript, and Tailwind CSS. This project demonstrates best practices in frontend development, including state management, API integration, and comprehensive testing.
-
+## Check this out at:
+```
+Deployed on Vercel : https://react-dashboard-tau-wine.vercel.app/
+```
 ## Features
 
 - **Responsive Layout**: Beautiful, mobile-first design using Tailwind CSS
@@ -25,34 +26,12 @@ Before you begin, ensure you have the following installed:
 
 ##  Running the Application
 
-### Production Mode
-Deployed on Vercel:  `https://react-dashboard-tau-wine.vercel.app/`
 
 ### Development Mode
 ```bash
 npm run dev
 ```
-The application will start on `http://localhost:5173` (default Vite port)
-
-
-##  Testing
-
-### Run Tests
-```bash
-npm test
-```
-
-### Run Tests with UI
-```bash
-npm run test:ui
-```
-
-### Run Tests with Coverage
-```bash
-npm run test:coverage
-```
-
-
+The application will start on `http://localhost:5173`
 
 ##  Features in Detail
 
@@ -79,7 +58,7 @@ npm run test:coverage
 - User-friendly error messages
 - Retry functionality for failed API calls
 
-## 🔑 Key Components
+## Key Components
 
 ### Redux Store
 - **usersSlice**: Manages user data, loading states, search, pagination, and sorting
