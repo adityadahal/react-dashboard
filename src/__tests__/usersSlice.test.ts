@@ -21,7 +21,7 @@ const createTestStore = (initialState?: Partial<UsersState>) => {
         error: null,
         searchTerm: '',
         currentPage: 1,
-        itemsPerPage: 10,
+        itemsPerPage: 5,
         sortField: null,
         sortOrder: 'asc' as const,
         ...initialState,
@@ -40,7 +40,7 @@ describe('usersSlice', () => {
     expect(state.error).toBe(null);
     expect(state.searchTerm).toBe('');
     expect(state.currentPage).toBe(1);
-    expect(state.itemsPerPage).toBe(10);
+    expect(state.itemsPerPage).toBe(5);
   });
 
   it('should handle setSearchTerm', () => {
