@@ -74,5 +74,3 @@ The application will start on `http://localhost:5173`
 - **Loading**: Reusable loading spinner
 
 
-**Aditya Kishor Dahal**
-

@@ -1,6 +1,4 @@
-/**
- * Application-wide constants
- */
+
 
 // API Configuration
 export const API_CONFIG = {
@@ -21,11 +19,6 @@ export const ROUTES = {
   DATA: '/data',
 } as const;
 
-// Local Storage Keys
-export const STORAGE_KEYS = {
-  THEME: 'dashboard-theme',
-  USER_PREFERENCES: 'dashboard-preferences',
-} as const;
 
 // Error Messages
 export const ERROR_MESSAGES = {
@@ -38,6 +31,6 @@ export const ERROR_MESSAGES = {
 // App Metadata
 export const APP_METADATA = {
   NAME: 'Dashboard App',
-  VERSION: '1.0.0',
-  DESCRIPTION: 'A modern dashboard application built with React, Redux, and TypeScript',
+  WELCOME_MESSAGE: 'Welcome to the Dashboard App!',
+  DESCRIPTION: ' A Dashboard to view user list fetched from a public API.',
 } as const;

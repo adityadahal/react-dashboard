@@ -1,6 +1,7 @@
 import { IconBolt, IconBrandChrome, IconDatabasePlus, IconDeviceIpadHorizontal, IconPlug, IconUsers } from '@tabler/icons-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { APP_METADATA } from '../utils/constants';
 
 const Home: React.FC = () => {
   const features = [
@@ -36,9 +37,9 @@ const Home: React.FC = () => {
     <div className="space-y-8">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-primary-600 to-primary-700 rounded-lg shadow-xl p-8 text-white">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Dashboard App</h1>
+        <h1 className="text-4xl font-bold mb-4">{APP_METADATA.WELCOME_MESSAGE}</h1>
         <p className="text-lg text-primary-100 mb-6">
-        A Dashboard to view user list fetched from a public API.
+       {APP_METADATA.DESCRIPTION}
         </p>
         <Link
           to="/data"

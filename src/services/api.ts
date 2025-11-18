@@ -1,5 +1,6 @@
 import axios, { AxiosError } from 'axios';
 import type { User, ApiError } from '../types';
+import { ERROR_MESSAGES } from '../utils/constants';
 
 //TODO: Move API_BASE_URL to env file.
 const API_BASE_URL = 'https://jsonplaceholder.typicode.com';
@@ -17,14 +18,14 @@ api.interceptors.response.use(
   (response) => response,
   (error: AxiosError) => {
     const apiError: ApiError = {
-      message: error.message || 'An unexpected error occurred',
+      message: error.message || ERROR_MESSAGES.GENERIC_ERROR,
       code: error.code,
     };
 
     if (error.response) {
       apiError.message = `Server Error: ${error.response.status} - ${error.response.statusText}`;
     } else if (error.request) {
-      apiError.message = 'No response from server. Please check your internet connection.';
+      apiError.message = ERROR_MESSAGES.NETWORK_ERROR;
     }
 
     return Promise.reject(apiError);

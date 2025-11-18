@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import type { ErrorInfo, ReactNode } from 'react';
+import { ERROR_MESSAGES } from '../../utils/constants';
 
 interface Props {
   children: ReactNode;
@@ -36,7 +37,7 @@ class ErrorBoundary extends Component<Props, State> {
               <h1 className="text-xl font-bold">Something went wrong</h1>
             </div>
             <p className="text-gray-600 mb-4">
-              {this.state.error?.message || 'An unexpected error occurred'}
+              {this.state.error?.message || ERROR_MESSAGES.GENERIC_ERROR}
             </p>
             <button
               onClick={() => window.location.reload()}
